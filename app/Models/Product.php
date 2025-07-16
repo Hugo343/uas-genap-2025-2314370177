@@ -7,13 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     protected $fillable = [
-        'name', 'description', 'price',
-        'category_id', 'is_publish', 'published_at'
+        'name', 'description', 'price', 'stock', 'is_publish', 'category_id'
     ];
 
     public function category()
     {
         return $this->belongsTo(Category::class);
     }
-}
 
+    public function reviews()
+    {
+        return $this->hasMany(ProductReview::class);
+    }
+}
