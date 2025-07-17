@@ -5,7 +5,7 @@
   "builds": [
     {
       "src": "public/index.php",
-      "use": "juicyfx/vercel-php"
+      "use": "@vercel-community/php@latest"
     }
   ],
   "routes": [
@@ -25,11 +25,11 @@
 
     "APP_KEY": "",
     "DB_CONNECTION": "pgsql",
-    "DB_HOST": "aws-0-ap-southeast-1.pooler.supabase.com",
-    "DB_PORT": "6543",
-    "DB_DATABASE": "postgres",
-    "DB_USERNAME": "postgres.sducohsyvrfuduugegjf",
-    "DB_PASSWORD": "Hugo26032003**",
+    "DB_HOST": "",
+    "DB_PORT": "",
+    "DB_DATABASE": "",
+    "DB_USERNAME": "",
+    "DB_PASSWORD": "",
 
     "SESSION_DRIVER": "file",
     "CACHE_DRIVER": "file",
