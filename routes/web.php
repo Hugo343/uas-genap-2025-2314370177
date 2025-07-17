@@ -49,3 +49,9 @@ Route::middleware(['auth'])->group(function () {
 //admin dashboard
 Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
 ;
+
+// Route pemesanan (order)
+
+    Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
+    Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
+;

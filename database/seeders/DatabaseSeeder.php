@@ -17,15 +17,15 @@ class DatabaseSeeder extends Seeder
     {
         // 1. Users
         $user1 = User::create([
-            'name' => 'Hugo Gabriel',
-            'email' => 'jonjon@example.com',
+            'name' => 'Hugo0 Gabriel',
+            'email' => 'jon@example.com',
             'password' => bcrypt('password'),
             'is_admin' => true,
         ]);
 
         $user2 = User::create([
             'name' => 'Alya Prameswari',
-            'email' => 'alya@example.com',
+            'email' => 'alyas@example.com',
             'password' => bcrypt('password'),
         ]);
 
@@ -109,5 +109,10 @@ class DatabaseSeeder extends Seeder
             'comment' => 'Mouse sangat responsif.',
             'rating' => 4
         ]);
+        $this->call([
+        UserSeeder::class,
+        ProductSeeder::class,
+        OrderSeeder::class,
+    ]);
     }
 }

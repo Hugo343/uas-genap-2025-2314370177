@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "name": "katalog-produk",
+  "framework": null,
+  "builds": [
+    {
+      "src": "public/index.php",
+      "use": "vercel-php@0.6.0"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(css|js|images|fonts|favicon.ico)(.*)",
+      "dest": "/public/$1$2"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/index.php"
+    }
+  ],
+  "env": {
+    "APP_ENV": "production",
+    "APP_DEBUG": "false",
+    "APP_URL": "",
+
+    "APP_KEY": "@app-key",
+    "DB_CONNECTION": "pgsql",
+    "DB_HOST": "aws-0-ap-southeast-1.pooler.supabase.com",
+    "DB_PORT": "6543",
+    "DB_DATABASE": "postgres",
+    "DB_USERNAME": "postgres.sducohsyvrfuduugegjf",
+    "DB_PASSWORD": "Hugo26032003**",
+
+    "SESSION_DRIVER": "file",
+    "CACHE_DRIVER": "file",
+    "LOG_CHANNEL": "stderr",
+    "SESSION_LIFETIME": "120"
+  }
+}
