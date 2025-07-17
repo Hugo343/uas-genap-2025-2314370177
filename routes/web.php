@@ -8,13 +8,6 @@ use App\Http\Controllers\ProductReviewController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 
-
-/*
-|--------------------------------------------------------------------------
-| Public Routes
-|--------------------------------------------------------------------------
-*/
-
 // Halaman utama (katalog produk)
 Route::get('/', [ProductController::class, 'index'])->name('home');
 
@@ -37,11 +30,6 @@ Route::put('/products/{product}', [ProductController::class, 'update'])->name('p
 Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy'); // Hapus
 Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show'); // Detail produk
 
-/*
-|--------------------------------------------------------------------------
-| Routes untuk user login
-|--------------------------------------------------------------------------
-*/
 
 Route::middleware(['auth'])->group(function () {
     // Wishlist
@@ -57,11 +45,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/products/{productId}/review', [ProductReviewController::class, 'store'])->name('products.review.store');
 });
 
-/*
-|--------------------------------------------------------------------------
-| Admin Dashboard
-|--------------------------------------------------------------------------
-*/
-Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
-});
+
+//admin dashboard
+Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+;
