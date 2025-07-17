@@ -54,4 +54,36 @@ Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.d
 
     Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
     Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
-;
+; 
+
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+// Health check route
+Route::get('/health', function () {
+    return response()->json([
+        'status' => 'ok',
+        'timestamp' => now(),
+        'environment' => app()->environment()
+    ]);
+});
+
+// Fallback route for SPA (if needed)
+Route::fallback(function () {
+    return response()->json([
+        'message' => 'Route not found'
+    ], 404);
+});
