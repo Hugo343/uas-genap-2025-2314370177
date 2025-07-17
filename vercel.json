@@ -3,7 +3,7 @@
     "builds": [
         {
             "src": "api/index.php",
-            "use": "juicyfx/vercel-php"
+            "use": "amnuts/vercel-php"
         }
     ],
     "routes": [
