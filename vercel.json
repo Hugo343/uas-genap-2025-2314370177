@@ -21,7 +21,7 @@
   "env": {
     "APP_ENV": "production",
     "APP_DEBUG": "false",
-    "APP_URL": "",
+    "APP_URL": "uas-genap-2025-2314370177.vercel.app",
 
     "APP_KEY": "@APP_KEY",
     "DB_CONNECTION": "pgsql",
