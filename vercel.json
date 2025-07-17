@@ -23,7 +23,7 @@
     "APP_DEBUG": "false",
     "APP_URL": "uas-genap-2025-2314370177.vercel.app",
 
-    "APP_KEY": "@APP_KEY",
+    "APP_KEY": "",
     "DB_CONNECTION": "pgsql",
     "DB_HOST": "aws-0-ap-southeast-1.pooler.supabase.com",
     "DB_PORT": "6543",
